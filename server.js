@@ -4,12 +4,12 @@ const path = require('path');
 
 const app = express();
 const PORT = 3000;
-app.use(express.static(path.join(__dirname, '/trydo/build')));
+app.use(express.static(path.join(__dirname, '/build')));
 //app.use(express.static(path.join(__dirname, '/react-app/build')));
 
 
 app.get("/*", (req,res)=>{
-    res.sendFile(__dirname+"/trydo/build/index.html")     
+    res.sendFile(__dirname+"/build/index.html")     
 })
 
 // app.get("/react", (req,res)=>{
